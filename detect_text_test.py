@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # read image
-image_path = 'data/panneau_pub_1.jpg'
+image_path = 'data_test/panneau_pub_1.jpg'
 
 img = cv2.imread(image_path)
 
 # instance text detector
-reader = easyocr.Reader(['fr'], gpu=True)
+reader = easyocr.Reader(['fr'], gpu=False)
 
 # detect text on image
 text_ = reader.readtext(img)
